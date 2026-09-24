@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:ital,wght@0,400;0,600;1,400&display=swap');
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Blink UI Theme CSS
+   REQUIRED for @blinkdotnew/ui components to render correctly.
+   ───────────────────────────────────────────────────────────────────────────── */
+@import '@blinkdotnew/ui/styles';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    height: 100%;
+  }
+
+  #root {
+    min-height: 100%;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  body {
+    min-height: 100%;
+    min-height: 100dvh;
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans), 'Space Grotesk', -apple-system, sans-serif;
+    letter-spacing: var(--tracking-normal);
+  }
+}
+
+/* JJK Arcade Brawl — Cyberpunk/Dark Arcade palette */
+:root {
+  --background: 240 60% 4%;
+  --foreground: 240 20% 92%;
+  --card: 240 40% 8%;
+  --card-foreground: 240 20% 92%;
+  --popover: 240 40% 8%;
+  --popover-foreground: 240 20% 92%;
+  --primary: 0 100% 59%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 270 80% 58%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 240 30% 12%;
+  --muted-foreground: 240 10% 55%;
+  --accent: 270 80% 58%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 90% 55%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 240 30% 18%;
+  --input: 240 30% 18%;
+  --ring: 0 100% 59%;
+
+  --chart-1: 0 100% 59%;
+  --chart-2: 270 80% 58%;
+  --chart-3: 47 96% 53%;
+  --chart-4: 180 80% 45%;
+  --chart-5: 320 80% 55%;
+
+  --sidebar: 240 50% 6%;
+  --sidebar-foreground: 240 20% 85%;
+  --sidebar-primary: 0 100% 59%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 270 80% 58%;
+  --sidebar-accent-foreground: 0 0% 100%;
+  --sidebar-border: 240 30% 15%;
+  --sidebar-ring: 0 100% 59%;
+
+  --font-sans: 'Space Grotesk', sans-serif;
+  --font-display: 'Orbitron', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+
+  --shadow-2xs: 0px 4px 8px -1px hsl(0 0% 0% / 0.3);
+  --shadow-xs: 0px 4px 8px -1px hsl(0 0% 0% / 0.4);
+  --shadow-sm: 0px 4px 12px -1px hsl(0 0% 0% / 0.5);
+  --shadow: 0px 4px 16px -1px hsl(0 0% 0% / 0.5);
+  --shadow-md: 0px 6px 20px -2px hsl(0 0% 0% / 0.6);
+  --shadow-lg: 0px 8px 30px -4px hsl(0 0% 0% / 0.7);
+  --shadow-xl: 0px 12px 40px -6px hsl(0 0% 0% / 0.8);
+  --shadow-2xl: 0px 16px 50px -8px hsl(0 0% 0% / 0.9);
+
+  --tracking-normal: 0.02em;
+  --spacing: 0.25rem;
+  --radius: 0.25rem;
+}
+
+:root.dark,
+.theme-linear.dark,
+.theme-glass.dark,
+.theme-midnight.dark,
+.theme-minimal.dark {
+  --background: 240 60% 4%;
+  --foreground: 240 20% 92%;
+  --card: 240 40% 8%;
+  --card-foreground: 240 20% 92%;
+  --popover: 240 40% 8%;
+  --popover-foreground: 240 20% 92%;
+  --primary: 0 100% 59%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 270 80% 58%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 240 30% 12%;
+  --muted-foreground: 240 10% 55%;
+  --accent: 270 80% 58%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 90% 55%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 240 30% 18%;
+  --input: 240 30% 18%;
+  --ring: 0 100% 59%;
+  --chart-1: 0 100% 59%;
+  --chart-2: 270 80% 58%;
+  --chart-3: 47 96% 53%;
+  --chart-4: 180 80% 45%;
+  --chart-5: 320 80% 55%;
+  --sidebar: 240 50% 6%;
+  --sidebar-foreground: 240 20% 85%;
+  --sidebar-primary: 0 100% 59%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 270 80% 58%;
+  --sidebar-accent-foreground: 0 0% 100%;
+  --sidebar-border: 240 30% 15%;
+  --sidebar-ring: 0 100% 59%;
+}
+
+/* ── Game Utility Classes ─────────────────────────────────────────────────── */
+.font-arcade {
+  font-family: 'Orbitron', sans-serif;
+}
+
+.neon-red {
+  text-shadow: 0 0 8px #ff3131, 0 0 16px #ff3131, 0 0 32px #ff3131;
+  color: #ff5151;
+}
+
+.neon-purple {
+  text-shadow: 0 0 8px #a855f7, 0 0 16px #a855f7, 0 0 32px #a855f7;
+  color: #c084fc;
+}
+
+.neon-gold {
+  text-shadow: 0 0 8px #fbbf24, 0 0 16px #fbbf24, 0 0 32px #fbbf24;
+  color: #fde68a;
+}
+
+.neon-cyan {
+  text-shadow: 0 0 8px #06b6d4, 0 0 16px #06b6d4, 0 0 32px #06b6d4;
+  color: #67e8f9;
+}
+
+.scanlines {
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.12) 2px,
+    rgba(0, 0, 0, 0.12) 4px
+  );
+  pointer-events: none;
+}
+
+.arcade-border {
+  border: 2px solid rgba(255, 49, 49, 0.6);
+  box-shadow: 0 0 20px rgba(255, 49, 49, 0.3), inset 0 0 20px rgba(255, 49, 49, 0.05);
+}
+
+.arcade-border-purple {
+  border: 2px solid rgba(168, 85, 247, 0.6);
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.3), inset 0 0 20px rgba(168, 85, 247, 0.05);
+}
+
+.arcade-border-gold {
+  border: 2px solid rgba(251, 191, 36, 0.6);
+  box-shadow: 0 0 20px rgba(251, 191, 36, 0.3), inset 0 0 20px rgba(251, 191, 36, 0.05);
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-neon {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.65; }
+}
+
+.pulse-neon {
+  animation: pulse-neon 1.5s ease-in-out infinite;
+}
+
+@keyframes blink-cursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.blink {
+  animation: blink-cursor 1s step-end infinite;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  15% { transform: translateX(-8px) rotate(-1deg); }
+  30% { transform: translateX(7px) rotate(1deg); }
+  45% { transform: translateX(-5px); }
+  60% { transform: translateX(5px); }
+  75% { transform: translateX(-3px); }
+  90% { transform: translateX(2px); }
+}
+
+.screen-shake {
+  animation: shake 0.4s ease-in-out;
+}
+
+@keyframes slide-in-left {
+  from { transform: translateX(-100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slide-in-right {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.slide-in-left { animation: slide-in-left 0.5s cubic-bezier(0.34, 1.56, 0.64, 1); }
+.slide-in-right { animation: slide-in-right 0.5s cubic-bezier(0.34, 1.56, 0.64, 1); }
+
+@keyframes victory-glow {
+  0%, 100% { text-shadow: 0 0 20px #fbbf24, 0 0 40px #fbbf24; }
+  50% { text-shadow: 0 0 40px #fbbf24, 0 0 80px #fbbf24, 0 0 120px #fbbf24; }
+}
+
+.victory-glow {
+  animation: victory-glow 1s ease-in-out infinite;
+}
+
+@keyframes cursed-energy-pulse {
+  0% { box-shadow: 0 0 5px currentColor; }
+  50% { box-shadow: 0 0 15px currentColor, 0 0 30px currentColor; }
+  100% { box-shadow: 0 0 5px currentColor; }
+}
+
+.cursed-pulse {
+  animation: cursed-energy-pulse 2s ease-in-out infinite;
+}
+
+@keyframes float-up {
+  from { transform: translateY(0); opacity: 1; }
+  to { transform: translateY(-50px); opacity: 0; }
+}
+
+.float-up {
+  animation: float-up 0.8s ease-out forwards;
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
