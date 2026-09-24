@@ -60,6 +60,9 @@ This prevents runtime CSS issues where Tailwind classes reference undefined CSS 
 
 
 
-#Test Project
+## Test Project
 
 This is a test project and may be turned private for any reason 
+
+## Link To Website
+to play this game click on this https://blink.new/p/jjk-arcade-game-4mw70gu3 or search up jjk arcade brawl and click on the one that says blink.ai
