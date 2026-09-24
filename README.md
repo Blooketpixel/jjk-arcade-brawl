@@ -57,3 +57,9 @@ The detection happens during the `npm run lint` command, which will:
 - Integrate seamlessly with your development workflow
 
 This prevents runtime CSS issues where Tailwind classes reference undefined CSS variables.
+
+
+
+#Test Project
+
+This is a test project and may be turned private for any reason 
